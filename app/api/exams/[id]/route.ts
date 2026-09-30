@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import connectToDatabase from '@/lib/mongodb';
-import Exam from '@/Models/Exam';
+import Exam from '@/models/Exam';
 
 export async function PUT(request: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
