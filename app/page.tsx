@@ -118,7 +118,7 @@ export default function Home() {
         const formattedStage = { ...stageData };
         if (!formattedStage.examDate) delete (formattedStage as any).examDate;
         const updatedStages = [...activeExam.stages];
-        formattedStage.documents = updatedStages[activeStageIndex].documents;
+        (formattedStage as any).documents = updatedStages[activeStageIndex].documents;
         updatedStages[activeStageIndex] = formattedStage;
         payload = { stages: updatedStages };
       } else if (modalMode === 'MANAGE_STAGE_DOCS' && activeStageIndex !== null) {
